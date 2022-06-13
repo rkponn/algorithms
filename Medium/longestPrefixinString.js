@@ -15,10 +15,10 @@ Explanation: The answer is "abc", with the length of 3.
  var lengthOfLongestSubstring = function(s) {
     let start = 0;
     let longest = 0;
-    let hash = {};
+    let hash = new Map();
     
     for(let i = 0; i < s.length; i++){
-        if(hash[s[i]]){
+        if(hash.has(s.charAt(i))){
             if(hash.get(s.charAt(i)) >= start){
                 start=hash.get(s.charAt(i))+1;    
             }
