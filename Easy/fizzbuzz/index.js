@@ -15,16 +15,17 @@
 function fizzBuzz(n) {
 
 
-    for(let i of n) {
-        if(i % 3 === 0) {
-            console.log('fizz');
-        } else if(i % 5 === 0) {
-            console.log('buzz');
-        } else if(i % 3 === 0 && i % 5 === 0) {
+    for(let n = 1; n <= i; n++) {
+        if(n % 3 === 0 && n % 5 === 0) {
             console.log('fizzbuzz');
+        } else if(n % 5 === 0) {
+            console.log('buzz');
+        } else if(n % 3 === 0) {
+            console.log('fizz');
+        } else {
+            console.log(n);
         }
-        console.log(i);
-    }
+    }  
 }
 
 module.exports = fizzBuzz;
